@@ -33,23 +33,3 @@ However, C# 3.0 features are not required, and can be used with C# 2.0:
 	  .Add ("v|verbose", delegate (string v) { if (v != null) ++verbose; })
 	  .Add ("h|?|help",  delegate (string v) { show_help = v != null; })
 	  .Add ("n|name=",   delegate (string v) { names.Add (v); });
-
-
-Distribution:
-------------
-
-In accordance with the Guidelines for Application Deployment [0], there are
-pkg-config files to permit simple access to the source or pre-compiled
-assemblies for re-use.
-
-There are two ways to use NDesk.Options:
-
-	- Bundle src/NDesk.Options/NDesk.Options/Options.cs with your app.
-
-		pkg-config --variable=Sources ndesk-options
-
-	- Use a prebuilt NDesk.Options.dll:
-
-		pkg-config --variable=Libraries ndesk-options
-
-[0] http://www.mono-project.com/Guidelines:Application_Deployment#Libraries_with_Unstable_APIs
