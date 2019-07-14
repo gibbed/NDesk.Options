@@ -1,9 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProjectGuid>{C98A6CD6-9422-4B35-8B7A-F520D75534D1}</ProjectGuid>
     <TargetFrameworks>netstandard2.0;net45;net40</TargetFrameworks>
-    <AssemblyTitle>NDesk.Options</AssemblyTitle>
-    <Product>NDesk.Options</Product>
     <Company>Novell</Company>
     <Copyright>Copyright © Novell 2008</Copyright>
     <AssemblyVersion>0.2.1.1</AssemblyVersion>
