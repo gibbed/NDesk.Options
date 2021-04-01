@@ -5,11 +5,15 @@
     <Copyright>Copyright © Novell 2008</Copyright>
     <AssemblyVersion>0.2.1.1</AssemblyVersion>
     <FileVersion>0.2.1.1</FileVersion>
+    <DefineConstants>NDESK_OPTIONS_LINQ;NDESK_OPTIONS</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>TRACE;DEBUG;LINQ;NDESK_OPTIONS</DefineConstants>
+  <PropertyGroup Condition=" '$(NDeskOptions_TargetFrameworksToBuild)' == '' ">
+    <GibbedIO_TargetFrameworksToBuild>$(TargetFrameworksToBuild)</GibbedIO_TargetFrameworksToBuild>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>TRACE;LINQ;NDESK_OPTIONS</DefineConstants>
+  <PropertyGroup Condition=" '$(NDeskOptions_TargetFrameworksToBuild)' == '' ">
+    <TargetFrameworks>netstandard2.0;net40;net45;net472;net48;net5.0</TargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(NDeskOptions_TargetFrameworksToBuild)' != '' ">
+    <TargetFrameworks>$(NDeskOptions_TargetFrameworksToBuild)</TargetFrameworks>
   </PropertyGroup>
 </Project>
