@@ -16,4 +16,7 @@
   <PropertyGroup Condition=" '$(NDeskOptions_TargetFrameworksToBuild)' != '' ">
     <TargetFrameworks>$(NDeskOptions_TargetFrameworksToBuild)</TargetFrameworks>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove=".git*" />
+  </ItemGroup>
 </Project>
